@@ -7,7 +7,7 @@ import NoteItem from './NoteItem';
 const Sidebar = ({ notes, selectedNote, addNote, setSelectedNote }) => {
   const newNote = () => {
     const note = {
-      id: new Date(),
+      id: Date.now(),
       title: '',
       content: '',
     };
