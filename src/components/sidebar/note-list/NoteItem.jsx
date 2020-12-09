@@ -6,15 +6,24 @@ import styles from './styles.module.css';
 import trashIcon from './trash.svg';
 
 const NoteItem = ({ note, setSelectedNote, selected, deleteNote }) => {
+  const setSelected = () => {
+    setSelectedNote(note);
+  };
+
+  const noteDelete = (e) => {
+    e.stopPropagation();
+    deleteNote(note);
+  };
+
   return (
     <li
       className={c(styles.noteItem, selected && styles.selected)}
-      onClick={() => setSelectedNote(note)}
+      onClick={setSelected}
     >
       {note && note.title ? note.title : 'New note...'}
       {selected && (
         <img
-          onClick={() => deleteNote(note)}
+          onClick={noteDelete}
           className={styles.trashIcon}
           src={trashIcon}
           alt="delete-icon"
