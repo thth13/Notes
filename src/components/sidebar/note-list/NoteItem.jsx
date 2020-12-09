@@ -20,7 +20,9 @@ const NoteItem = ({ note, setSelectedNote, selected, deleteNote }) => {
       className={c(styles.noteItem, selected && styles.selected)}
       onClick={setSelected}
     >
-      {note && note.title ? note.title : 'New note...'}
+      <span className={styles.noteTitle}>
+        {note && note.title ? note.title : 'New note...'}
+      </span>
       {selected && (
         <img
           onClick={noteDelete}
