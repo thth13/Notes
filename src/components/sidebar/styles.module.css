@@ -1,0 +1,32 @@
+.sidebar {
+  background-color: #252525;
+  min-width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.searchBlock {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.searchField {
+  background-color: #353233;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  padding: 0;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #6f6c6d;
+  padding: 2px 5px;
+  outline: none;
+}
+
+.searchField::placeholder {
+  text-align: center;
+}
